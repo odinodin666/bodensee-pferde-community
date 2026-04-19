@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Bodensee-Pferde Community</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-placeholder">Logo</div>
+            </div>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mitglieder.html">Mitglieder</a></li>
+                    <li><a href="termine.html">Termine</a></li>
+                    <li><a href="galerie.html" class="active">Galerie</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="section galerie-section">
+        <div class="container">
+            <h2>Bildergalerie</h2>
+            
+            <!-- Album Filter -->
+            <div class="gallery-filters mb-4">
+                <input type="text" placeholder="Nach Album oder Beschreibung suchen..." class="search-input w-50">
+                <select class="filter-select w-50">
+                    <option value="all">Alle Alben</option>
+                    <option value="events">Veranstaltungen</option>
+                    <option value="horses">Pferde</option>
+                    <option value="community">Gemeinschaft</option>
+                </select>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Example Gallery Items -->
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/8B4513/FFFFFF?text=Pferd+am+See" alt="Pferd am Bodensee">
+                    <div class="gallery-overlay">
+                        <h3>Frühling am See</h3>
+                        <p class="gallery-category">Pferde</p>
+                        <a href="#" class="btn-link">Mehr sehen</a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/2d5016/FFFFFF?text=Ausritt+Gruppe" alt="Gruppenausritt">
+                    <div class="gallery-overlay">
+                        <h3>Gemeinsamer Ausritt</h3>
+                        <p class="gallery-category">Events</p>
+                        <a href="#" class="btn-link">Mehr sehen</a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/E2725B/FFFFFF?text=Turnier+Springen" alt="Turnierbild">
+                    <div class="gallery-overlay">
+                        <h3>Springturnier Konstanz</h3>
+                        <p class="gallery-category">Turniere</p>
+                        <a href="#" class="btn-link">Mehr sehen</a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/8B4513/FFFFFF?text=Fohlenshow" alt="Fohlen">
+                    <div class="gallery-overlay">
+                        <h3>Fohlen präsentiert</h3>
+                        <p class="gallery-category">Zucht</p>
+                        <a href="#" class="btn-link">Mehr sehen</a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/2d5016/FFFFFF?text=Winter+Ausritt" alt="Winterausritt">
+                    <div class="gallery-overlay">
+                        <h3>Winterliche Stimmung</h3>
+                        <p class="gallery-category">Natur</p>
+                        <a href="#" class="btn-link">Mehr sehen</a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/E2725B/FFFFFF?text=Community+Treffen" alt="Treffen">
+                    <div class="gallery-overlay">
+                        <h3>Mitgliedertreffen</h3>
+                        <p class="gallery-category">Gemeinschaft</p>
+                        <a href="#" class="btn-link">Mehr sehen</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="text-center mt-4">
+                <a href="#" class="btn-outline">Weitere Bilder laden</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Bodensee-Pferde Community</h3>
+                    <p>Musterstraße 12<br>
+                    88045 Friedrichshafen<br>
+                    Deutschland</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Kontakt</h3>
+                    <p>Telefon: +49 7541 123456</p>
+                    <p>Email: info@bodensee-pferde.de</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Folgen Sie uns</h3>
+                    <div class="social-icons">
+                        <span>Facebook</span> <span>Instagram</span> <span>YouTube</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bodensee-Pferde Community. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

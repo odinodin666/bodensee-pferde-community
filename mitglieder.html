@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitglieder - Bodensee-Pferde Community</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-placeholder">Logo</div>
+            </div>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mitglieder.html" class="active">Mitglieder</a></li>
+                    <li><a href="termine.html">Termine</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="section mitglieder-section">
+        <div class="container">
+            <h2>Mitgliederbereich</h2>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="register">Registrierung</button>
+                <button class="tab-btn" data-tab="directory">Mitglieder-Verzeichnis</button>
+            </div>
+            
+            <div class="tab-content">
+                <!-- Login Form -->
+                <div id="login" class="tab-pane active">
+                    <form class="auth-form">
+                        <div class="form-group">
+                            <label for="login-email">E-Mail-Adresse</label>
+                            <input type="email" id="login-email" placeholder="Ihre E-Mail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Passwort</label>
+                            <input type="password" id="login-password" placeholder="Ihr Passwort" required>
+                        </div>
+                        <button type="submit" class="btn-primary btn-block">Einloggen</button>
+                        <p class="auth-footer">Passwort vergessen? <a href="#">Zurücksetzen</a></p>
+                    </form>
+                </div>
+                
+                <!-- Registration Form -->
+                <div id="register" class="tab-pane">
+                    <form class="auth-form">
+                        <div class="form-group">
+                            <label for="reg-firstname">Vorname</label>
+                            <input type="text" id="reg-firstname" placeholder="Ihr Vorname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-lastname">Nachname</label>
+                            <input type="text" id="reg-lastname" placeholder="Ihr Nachname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-email">E-Mail-Adresse</label>
+                            <input type="email" id="reg-email" placeholder="Ihre E-Mail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-password">Passwort</label>
+                            <input type="password" id="reg-password" placeholder="Ein sicheres Passwort" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-confirm-password">Passwort bestätigen</label>
+                            <input type="password" id="reg-confirm-password" placeholder="Passwort noch einmal eingeben" required>
+                        </div>
+                        <button type="submit" class="btn-primary btn-block">Registrieren</button>
+                        <p class="auth-footer">Bereits Mitglied? <a href="#" data-tab="login">Einloggen</a></p>
+                    </form>
+                </div>
+                
+                <!-- Member Directory -->
+                <div id="directory" class="tab-pane">
+                    <div class="member-filters">
+                        <input type="text" placeholder="Nach Name suchen..." class="search-input">
+                        <select class="filter-select">
+                            <option value="all">Alle Mitglieder</option>
+                            <option value="active">Aktive Mitglieder</option>
+                            <option value="premium">Premium-Mitglieder</option>
+                        </select>
+                    </div>
+                    
+                    <div class="member-grid">
+                        <!-- Beispiel-Mitgliedskarten -->
+                        <div class="member-card">
+                            <div class="member-avatar">
+                                <div class="avatar-placeholder">Foto</div>
+                            </div>
+                            <div class="member-info">
+                                <h3>Anna Müller</h3>
+                                <p class="member-location">Friedrichshafen</p>
+                                <p class="member-status status-premium">Premium-Mitglied</p>
+                                <p class="member-bio">Begeisterte Reiterin mit 15 Jahren Erfahrung im Springsport.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="member-card">
+                            <div class="member-avatar">
+                                <div class="avatar-placeholder">Foto</div>
+                            </div>
+                            <div class="member-info">
+                                <h3>Thomas Becker</h3>
+                                <p class="member-location">Konstanz</p>
+                                <p class="member-status status-active">Aktives Mitglied</p>
+                                <p class="member-bio">Westernreiter und Ausbildungsleiter für junge Pferde.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="member-card">
+                            <div class="member-avatar">
+                                <div class="avatar-placeholder">Foto</div>
+                            </div>
+                            <div class="member-info">
+                                <h3>Sarah Weber</h3>
+                                <p class="member-location">Überlingen</p>
+                                <p class="member-status status-active">Aktives Mitglied</p>
+                                <p class="member-bio">Dressurreiterin und Pferdephysiotherapeutin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Bodensee-Pferde Community</h3>
+                    <p>Musterstraße 12<br>
+                    88045 Friedrichshafen<br>
+                    Deutschland</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Kontakt</h3>
+                    <p>Telefon: +49 7541 123456</p>
+                    <p>Email: info@bodensee-pferde.de</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Folgen Sie uns</h3>
+                    <div class="social-icons">
+                        <span>Facebook</span> <span>Instagram</span> <span>YouTube</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bodensee-Pferde Community. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Tab functionality for members page
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Deactivate all tabs
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Activate clicked tab
+                    button.classList.add('active');
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

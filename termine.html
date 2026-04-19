@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termine - Bodensee-Pferde Community</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-placeholder">Logo</div>
+            </div>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mitglieder.html">Mitglieder</a></li>
+                    <li><a href="termine.html" class="active">Termine</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="section termine-section">
+        <div class="container">
+            <h2>Veranstaltungskalender</h2>
+            
+            <!-- Filter and Search -->
+            <div class="event-filters">
+                <input type="text" placeholder="Nach Event suchen..." class="search-input">
+                <select class="filter-select">
+                    <option value="all">Alle Termine</option>
+                    <option value="turnier">Turniere</option>
+                    <option value="ausritt">Ausritte</option>
+                    <option value="seminar">Seminare & Workshops</option>
+                </select>
+            </div>
+            
+            <!-- Calendar View (simplified as list) -->
+            <div class="event-calendar">
+                <!-- Example Event Cards -->
+                <div class="event-card">
+                    <div class="event-date-badge">
+                        <span class="day">03</span>
+                        <span class="month">Mai</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Frühlingsturnier Konstanz</h3>
+                        <p class="event-time">03. - 05. Mai 2026</p>
+                        <p class="event-location">Hofgut Sonnenberg, Konstanz</p>
+                        <p class="event-description">Springen und Dressur für alle Leistungsstände. Zuschauer herzlich willkommen!</p>
+                        <div class="event-tags">
+                            <span class="tag tag-turnier">Turnier</span>
+                            <span class="tag tag-springen">Springen</span>
+                        </div>
+                        <a href="#" class="btn-primary">Zum Event</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-date-badge">
+                        <span class="day">15</span>
+                        <span class="month">Mai</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Gemeinsamer Ausritt entlang des Sees</h3>
+                        <p class="event-time">15. Mai 2026, 10:00 Uhr</p>
+                        <p class="event-location">Treffpunkt: Fähranlage Wasserburg</p>
+                        <p class="event-description">Gemütlicher Ausritt für Pferd und Reiter aller Rassen und Disziplinen. Anschließend Einkehr im Seerestaurant.</p>
+                        <div class="event-tags">
+                            <span class="tag tag-ausritt">Ausritt</span>
+                            <span class="tag tag-gesellig">Gesellig</span>
+                        </span>
+                        </div>
+                        <a href="#" class="btn-primary">Zum Event</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-date-badge">
+                        <span class="day">22</span>
+                        <span class="month">Mai</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Workshop: Pferdegesundheit & Erste Hilfe</h3>
+                        <p class="event-time">22. Mai 2026, 09:00 - 17:00 Uhr</p>
+                        <p class="event-location">Bodenseezentrum für Pferdemedizin, Überlingen</p>
+                        <p class="event-description">Praxisnaher Workshop mit Tierärztin Dr. Schmidt. Themen: Wundversorgung, Kolik-Erkennung, Notfallmaßnahmen.</p>
+                        <div class="event-tags">
+                            <span class="tag tag-seminar">Seminar</span>
+                            <span class="tag tag-gesundheit">Gesundheit</span>
+                        </div>
+                        <a href="#" class="btn-primary">Zum Event</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button (placeholder) -->
+            <div class="text-center mt-4">
+                <a href="#" class="btn-outline">Weitere Termine laden</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Bodensee-Pferde Community</h3>
+                    <p>Musterstraße 12<br>
+                    88045 Friedrichshafen<br>
+                    Deutschland</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Kontakt</h3>
+                    <p>Telefon: +49 7541 123456</p>
+                    <p>Email: info@bodensee-pferde.de</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Folgen Sie uns</h3>
+                    <div class="social-icons">
+                        <span>Facebook</span> <span>Instagram</span> <span>YouTube</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bodensee-Pferde Community. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
