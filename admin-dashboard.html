@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Dashboard - Bodensee-Pferde Community</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-placeholder">Logo</div>
+            </div>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mitglieder.html">Mitglieder</a></li>
+                    <li><a href="termine.html">Termine</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="#" class="active">Admin</a></li>
+                    <li><a href="#">Forum</a></li>
+                </ul>
+            </nav>
+            <div class="admin-actions">
+                <button class="btn-outline" id="logout-btn">Logout</button>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="section admin-dashboard">
+        <div class="container">
+            <h2>Admin-Dashboard</h2>
+            
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="overview">Übersicht</button>
+                <button class="tab-btn" data-tab="members">Mitglieder verwalten</button>
+                <button class="tab-btn" data-tab="horses">Pferde verwalten</button>
+                <button class="tab-btn" data-tab="events">Events verwalten</button>
+                <button class="tab-btn" data-tab="forum">Forum moderieren</button>
+                <button class="tab-btn" data-tab="settings">Einstellungen</button>
+            </div>
+            
+            <div class="tab-content">
+                <!-- Overview Tab -->
+                <div id="overview" class="tab-pane active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Mitglieder gesamt</h3>
+                            <p class="stat-number">124</p>
+                            <p class="stat-change">+12 dieses Monat</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Neue heute</h3>
+                            <p class="stat-number">3</p>
+                            <p class="stat-change">+2 gegenüber gestern</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Pferde registriert</h3>
+                            <p class="stat-number">87</p>
+                            <p class="stat-change">+5 dieses Woche</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Events diese Woche</h3>
+                            <p class="stat-number">5</p>
+                            <p class="stat-change">+1 gegenüber letzter Woche</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Ungelöste Forum-Meldungen</h3>
+                            <p class="stat-number">7</p>
+                            <p class="stat-change">-2 heute</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Systemauslastung</h3>
+                            <p class="stat-number">45%</p>
+                            <p class="stat-change">Normal</p>
+                        </div>
+                    </div>
+                    
+                    <div class="recent-activity">
+                        <h3>Letzte Aktivitäten</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <span class="activity-time">10:32</span>
+                                <span class="activity-text">Neues Mitglied registriert: Anna Müller</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-time">09:15</span>
+                                <span class="activity-text">Event erstellt: Frühlingsturnier Konstanz</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-time">08:45</span>
+                                <span class="activity-text">Forum-Beitrag freigegeben: Pferdepflege Tipps</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Members Management Tab -->
+                <div id="members" class="tab-pane">
+                    <div class="member-management">
+                        <div class="member-header">
+                            <h3>Mitglieder-Verwaltung</h3>
+                            <div class="member-actions">
+                                <input type="text" placeholder="Nach Name oder E-Mail suchen..." class="member-search">
+                                <button class="btn-primary">Neues Mitglied hinzufügen</button>
+                            </div>
+                        </div>
+                        
+                        <div class="member-table-wrapper">
+                            <table class="member-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>E-Mail</th>
+                                        <th>Status</th>
+                                        <th>Rolle</th>
+                                        <th>Beigetreten</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Anna Müller</td>
+                                        <td>anna@example.com</td>
+                                        <td><span class="status-badge status-active">Aktiv</span></td>
+                                        <td><span class="role-badge role-member">Mitglied</span></td>
+                                        <td>15.03.2026</td>
+                                        <td>
+                                            <button class="btn-icon btn-edit" title="Bearbeiten">✏️</button>
+                                            <button class="btn-icon btn-delete" title="Löschen">🗑️</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thomas Becker</td>
+                                        <td>thomas@example.com</td>
+                                        <td><span class="status-badge status-premium">Premium</span></td>
+                                        <td><span class="role-badge role-admin">Admin</span></td>
+                                        <td>01.02.2026</td>
+                                        <td>
+                                            <button class="btn-icon btn-edit" title="Bearbeiten">✏️</button>
+                                            <button class="btn-icon btn-delete" title="Löschen">🗑️</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sarah Weber</td>
+                                        <td>sarah@example.com</td>
+                                        <td><span class="status-badge status-suspended">Gespendet</span></td>
+                                        <td><span class="role-badge role-moderator">Moderator</span></td>
+                                        <td>10.03.2026</td>
+                                        <td>
+                                            <button class="btn-icon btn-edit" title="Bearbeiten">✏️</button>
+                                            <button class="btn-icon btn-delete" title="Löschen">🗑️</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Horses Management Tab -->
+                <div id="horses" class="tab-pane">
+                    <div class="horse-management">
+                        <div class="horse-header">
+                            <h3>Pferde-Verwaltung</h3>
+                            <div class="horse-actions">
+                                <input type="text" placeholder="Nach Pferd oder Besitzer suchen..." class="horse-search">
+                                <button class="btn-primary">Neues Pferd hinzufügen</button>
+                            </div>
+                        </div>
+                        
+                        <div class="horse-table-wrapper">
+                            <table class="horse-table">
+                                <thead>
+                                    <tr>
+                                        <th>Pferdename</th>
+                                        <th>Besitzer</th>
+                                        <th>Rasse</th>
+                                        <th>Geburtsdatum</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Blitz</td>
+                                        <td>Anna Müller</td>
+                                        <td>Oldenburg</td>
+                                        <td>05.04.2020</td>
+                                        <td><span class="status-badge status-active">Aktiv</span></td>
+                                        <td>
+                                            <button class="btn-icon btn-edit" title="Bearbeiten">✏️</button>
+                                            <button class="btn-icon btn-delete" title="Löschen">🗑️</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stella</td>
+                                        <td>Thomas Becker</td>
+                                        <td>Quarter Horse</td>
+                                        <td>12.08.2019</td>
+                                        <td><span class="status-badge status-active">Aktiv</span></td>
+                                        <td>
+                                            <button class="btn-icon btn-edit" title="Bearbeiten">✏️</button>
+                                            <button class="btn-icon btn-delete" title="Löschen">🗑️</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prince</td>
+                                        <td>Sarah Weber</td>
+                                        <td>Holsteiner</td>
+                                        <td>20.03.2021</td>
+                                        <td><span class="status-badge status-in-training">In Training</span></td>
+                                        <td>
+                                            <button class="btn-icon btn-edit" title="Bearbeiten">✏️</button>
+                                            <button class="btn-icon btn-delete" title="Löschen">🗑️</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Events Management Tab -->
+                <div id="events" class="tab-pane">
+                    <div class="event-management">
+                        <div class="event-header">
+                            <h3>Events-Verwaltung</h3>
+                            <div class="event-actions">
+                                <input type="text" placeholder="Nach Event suchen..." class="event-search">
+                                <button class="btn-primary">Neues Event hinzufügen</button>
+                            </div>
+                        </div>
+                        
+                        <div class="event-view-toggle">
+                            <button class="view-btn active" data-view="list">Liste</button>
+                            <button class="view-btn" data-view="calendar">Kalender</button>
+                        </div>
+                        
+                        <div id="event-list-view" class="event-view active">
+                            <div class="event-table-wrapper">
+                                <table class="event-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Titel</th>
+                                            <th>Datum</th>
+                                            <th>Ort</th>
+                                            <th>Typ</th>
+                                            <th>Teilnehmer</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Frühlingsturnier Konstanz</td>
+                                            <td>03.-05. Mai 2026</td>
+                                            <td>Hofgut Sonnenberg</td>
+                                            <td><span class="event-type-badge type-turnier">Turnier</span></td>
+                                            <td>24</td>
+                                            <td>
+                                                <button class="btn-icon btn-edit" title="Bearbeiten">✏️</button>
+                                                <button class="btn-icon btn-delete" title="Löschen">🗑️</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gemeinsamer Ausritt entlang des Sees</td>
+                                            <td>15. Mai 2026</td>
+                                            <td>Fähranlage Wasserburg</td>
+                                            <td><span class="event-type-badge type-ausritt">Ausritt</span></td>
+                                            <td>12</td>
+                                            <td>
+                                                <button class="btn-icon btn-edit" title="Bearbeiten">✏️</button>
+                                                <button class="btn-icon btn-delete" title="Löschen">🗑️</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Workshop: Pferdegesundheit & Erste Hilfe</td>
+                                            <td>22. Mai 2026</td>
+                                            <td>Bodenseezentrum für Pferdemedizin</td>
+                                            <td><span class="event-type-badge type-seminar">Seminar</span></td>
+                                            <td>8</td>
+                                            <td>
+                                                <button class="btn-icon btn-edit" title="Bearbeiten">✏️</button>
+                                                <button class="btn-icon btn-delete" title="Löschen">🗑️</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div id="event-calendar-view" class="event-view">
+                            <!-- Placeholder for calendar -->
+                            <div class="calendar-placeholder">
+                                <h3>Kalender-Ansicht</h3>
+                                <p>Kalender wird hier angezeigt...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Forum Moderation Tab -->
+                <div id="forum" class="tab-pane">
+                    <div class="forum-moderation">
+                        <div class="forum-header">
+                            <h3>Forum-Moderation</h3>
+                            <div class="forum-actions">
+                                <button class="btn-primary">Alle als gelesen markieren</button>
+                            </div>
+                        </div>
+                        
+                        <div class="moderation-tabs">
+                            <button class="mod-tab active" data-mod="posts">Beiträge</button>
+                            <button class="mod-tab" data-mod="comments">Kommentare</button>
+                            <button class="mod-tab" data-mod="reports">Meldungen</button>
+                        </div>
+                        
+                        <div id="mod-posts" class="mod-content active">
+                            <div class="mod-item">
+                                <div class="mod-header">
+                                    <strong>Neuer Beitrag zur Freigabe</strong>
+                                    <span class="mod-time">Vor 2 Stunden</span>
+                                </div>
+                                <div class="mod-content-text">
+                                    <p>Ich habe eine Frage zur richtigen Fütterung im Winter...</p>
+                                </div>
+                                <div class="mod-actions">
+                                    <button class="btn-primary btn-small">Freigeben</button>
+                                    <button class="btn-outline btn-small">Ablehnen</button>
+                                </div>
+                            </div>
+                            
+                            <div class="mod-item">
+                                <div class="mod-header">
+                                    <strong>Neuer Beitrag zur Freigabe</strong>
+                                    <span class="mod-time">Vor 4 Stunden</span>
+                                </div>
+                                <div class="mod-content-text">
+                                    <p>Wer kennt einen guten Hufschmied in der Nähe von Überlingen?</p>
+                                </div>
+                                <div class="mod-actions">
+                                    <button class="btn-primary btn-small">Freigeben</button>
+                                    <button class="btn-outline btn-small">Ablehnen</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="mod-comments" class="mod-content">
+                            <!-- Comments moderation -->
+                        </div>
+                        
+                        <div id="mod-reports" class="mod-content">
+                            <!-- Reports moderation -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Settings Tab -->
+                <div id="settings" class="tab-pane">
+                    <div class="settings-panel">
+                        <h3>Einstellungen</h3>
+                        <div class="setting-group">
+                            <h4>Allgemeine Einstellungen</h4>
+                            <div class="setting-item">
+                                <label for="site-name">Seitenname</label>
+                                <input type="text" id="site-name" value="Bodensee-Pferde Community">
+                            </div>
+                            <div class="setting-item">
+                                <label for="contact-email">Kontakt-E-Mail</label>
+                                <input type="email" id="contact-email" value="info@bodensee-pferde.de">
+                            </div>
+                            <div class="setting-item">
+                                <label for="maintenance">Wartungsmodus</label>
+                                <select id="maintenance">
+                                    <option value="disabled">Deaktiviert</option>
+                                    <option value="enabled">Aktiviert</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-group">
+                            <h4>E-Mail-Benachrichtigungen</h4>
+                            <div class="setting-item">
+                                <label><input type="checkbox" checked> Neue Mitgliedschaften</label>
+                            </div>
+                            <div class="setting-item">
+                                <label><input type="checkbox" checked> Neue Events</label>
+                            </div>
+                            <div class="setting-item">
+                                <label><input type="checkbox"> Forum-Beiträge</label>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-group">
+                            <h4>Datenschutz & Sicherheit</h4>
+                            <div class="setting-item">
+                                <label><input type="checkbox" checked> DSGVO-Kompatibel</label>
+                            </div>
+                            <div class="setting-item">
+                                <label><input type="checkbox" checked> Zwei-Faktor-Authentifizierung erfordern</label>
+                            </div>
+                            <div class="setting-item">
+                                <button class="btn-outline">Passwort zurücksetzen für alle Benutzer</button>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-primary mt-3">Einstellungen speichern</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Bodensee-Pferde Community</h3>
+                    <p>Musterstraße 12<br>
+                    88045 Friedrichshafen<br>
+                    Deutschland</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Kontakt</h3>
+                    <p>Telefon: +49 7541 123456</p>
+                    <p>Email: info@bodensee-pferde.de</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Folgen Sie uns</h3>
+                    <div class="social-icons">
+                        <span>Facebook</span> <span>Instagram</span> <span>YouTube</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bodensee-Pferde Community. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Admin dashboard specific scripts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Deactivate all tabs
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Activate clicked tab
+                    button.classList.add('active');
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Event view toggle
+            const viewButtons = document.querySelectorAll('.view-btn');
+            const eventViews = document.querySelectorAll('.event-view');
+            
+            viewButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    viewButtons.forEach(btn => btn.classList.remove('active'));
+                    eventViews.forEach(view => view.classList.remove('active'));
+                    
+                    button.classList.add('active');
+                    const viewId = button.getAttribute('data-view') + '-view';
+                    document.getElementById(viewId).classList.add('active');
+                });
+            });
+            
+            // Forum moderation tabs
+            const modTabs = document.querySelectorAll('.mod-tab');
+            const modContents = document.querySelectorAll('.mod-content');
+            
+            modTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    modTabs.forEach(t => t.classList.remove('active'));
+                    modContents.forEach(c => c.classList.remove('active'));
+                    
+                    tab.classList.add('active');
+                    const modId = tab.getAttribute('data-mod');
+                    document.getElementById('mod-' + modId).classList.add('active');
+                });
+            });
+            
+            // Logout button
+            document.getElementById('logout-btn').addEventListener('click', function() {
+                if (confirm('Möchten Sie sich wirklich abmelden?')) {
+                    // In real app: redirect to logout endpoint
+                    window.location.href = 'index.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
